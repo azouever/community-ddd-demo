@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.dqdl.community.domain.service.contentfilter;
 

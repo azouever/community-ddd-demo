@@ -3,6 +3,7 @@
  */
 package com.dqdl.community.domain.model.user;
 
+import com.dqdl.community.domain.service.factory.PostAuthorFactory;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -30,7 +31,7 @@ public class PostAuthorTest {
 	@Before
 	public void setUp() throws Exception {
 		authorId = 40;
-		postAuthor = new PostAuthor(authorId);
+		postAuthor = PostAuthorFactory.createPostAuthor(authorId);
 		post = new Post(authorId, "测试帖子",  "测试帖子内容，内容必须大于16个字，字数不够我来凑！");
 	}
 	

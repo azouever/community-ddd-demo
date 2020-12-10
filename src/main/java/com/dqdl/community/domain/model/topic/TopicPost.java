@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.dqdl.community.domain.model.topic;
 
@@ -10,61 +10,61 @@ package com.dqdl.community.domain.model.topic;
  *
  */
 public class TopicPost {
-	
-	private long postId;
-	
-	private long topicId;
-	
-	public TopicPost(long topicId, long postId) {
-		this.setPostId(postId);
-		this.setTopicId(topicId);
-	}
 
-	/**
-	 * @return the postId
-	 */
-	public long getPostId() {
-		return postId;
-	}
+  private long postId;
 
-	/**
-	 * @param postId the postId to set
-	 */
-	public void setPostId(long postId) {
-		this.postId = postId;
-	}
+  private long topicId;
 
-	/**
-	 * @return the topicId
-	 */
-	public long getTopicId() {
-		return topicId;
-	}
+  public TopicPost(long topicId, long postId) {
+    this.setPostId(postId);
+    this.setTopicId(topicId);
+  }
 
-	/**
-	 * @param topicId the topicId to set
-	 */
-	public void setTopicId(long topicId) {
-		this.topicId = topicId;
-	}
-	
-	@Override
-	public boolean equals(Object anObject) {
-		if (this == anObject) {
-            return true;
-        }
-		if(anObject instanceof TopicPost) {
-			if(this.postId == ((TopicPost)anObject).getPostId()
-					&& this.topicId == ((TopicPost)anObject).getTopicId()) {
-				return true;
-			}
-		} 
-		return false;	
-	}	
-	
-	@Override
-    public int hashCode() {
-    	return Long.hashCode(this.postId) ^ Long.hashCode(this.topicId);
+  /**
+   * @return the postId
+   */
+  public long getPostId() {
+    return postId;
+  }
+
+  /**
+   * @param postId the postId to set
+   */
+  public void setPostId(long postId) {
+    this.postId = postId;
+  }
+
+  /**
+   * @return the topicId
+   */
+  public long getTopicId() {
+    return topicId;
+  }
+
+  /**
+   * @param topicId the topicId to set
+   */
+  public void setTopicId(long topicId) {
+    this.topicId = topicId;
+  }
+
+  @Override
+  public boolean equals(Object anObject) {
+    if (this == anObject) {
+      return true;
     }
+    if (anObject instanceof TopicPost) {
+      if (this.postId == ((TopicPost) anObject).getPostId()
+          && this.topicId == ((TopicPost) anObject).getTopicId()) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  @Override
+  public int hashCode() {
+    return Long.hashCode(this.postId) ^ Long.hashCode(this.topicId);
+  }
 
 }

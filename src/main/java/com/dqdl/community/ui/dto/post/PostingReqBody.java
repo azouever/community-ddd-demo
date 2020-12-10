@@ -1,46 +1,46 @@
 package com.dqdl.community.ui.dto.post;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 import com.dqdl.community.ui.dto.base.RequestBody;
+import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  * Posting请求体
+ *
  * @author daoqidelv
  * @createdate 2017年10月15日
  */
 public class PostingReqBody extends RequestBody {
 
-	@NotEmpty(message="{request.userId.not.empty}")
-	private String userId;
-	
-    private String title;
-    
-    @NotEmpty(message="{request.post.posting.content.not.empty}")
-    private String sourceContent;
+  @NotEmpty(message = "{request.userId.not.empty}")
+  private String userId;
 
-	public String getUserId() {
-		return userId;
-	}
+  private String title;
 
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
+  @NotEmpty(message = "{request.post.posting.content.not.empty}")
+  private String sourceContent;
 
-	public String getTitle() {
-		return title;
-	}
+  public String getUserId() {
+    return userId;
+  }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+  public void setUserId(String userId) {
+    this.userId = userId;
+  }
 
-	public String getSourceContent() {
-		return sourceContent;
-	}
+  public String getTitle() {
+    return title;
+  }
 
-	public void setSourceContent(String sourceContent) {
-		this.sourceContent = sourceContent;
-	}  
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public String getSourceContent() {
+    return sourceContent;
+  }
+
+  public void setSourceContent(String sourceContent) {
+    this.sourceContent = sourceContent;
+  }
 
 }
